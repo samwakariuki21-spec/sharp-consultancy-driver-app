@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Sharp Consultancy Limited icon">
+  <rect width="512" height="512" rx="96" fill="#135d66"/>
+  <path d="M116 170h246c32 0 58 26 58 58v92H92V194c0-13 11-24 24-24Z" fill="#f5c84c"/>
+  <path d="M130 206h70v58h-70zm96 0h70v58h-70zm96 0h62v58h-62z" fill="#ffffff"/>
+  <path d="M92 320h328v42H92z" fill="#cf6f3d"/>
+  <circle cx="174" cy="374" r="38" fill="#182023"/>
+  <circle cx="338" cy="374" r="38" fill="#182023"/>
+  <circle cx="174" cy="374" r="15" fill="#ffffff"/>
+  <circle cx="338" cy="374" r="15" fill="#ffffff"/>
+  <path d="M144 128c42-44 98-62 168-52" fill="none" stroke="#ffffff" stroke-width="28" stroke-linecap="round"/>
+  <text x="256" y="150" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="72" font-weight="700">S</text>
+</svg>

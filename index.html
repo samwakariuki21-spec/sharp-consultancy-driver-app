@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#135d66">
+    <title>Sharp Consultancy Limited School Driver Jobs</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="site-layout">
+      <aside class="side-menu" aria-label="Resources and contact">
+        <a class="brand side-brand" href="#home" aria-label="Sharp Consultancy Limited home">
+          <span class="brand-mark">S</span>
+          <span>Sharp Consultancy Limited</span>
+        </a>
+        <nav class="side-links" aria-label="Quick links">
+          <a href="#jobSearch">Find Jobs</a>
+          <a class="requirements-link" href="school-driver-requirements.pdf" target="_blank" rel="noopener">Requirements PDF</a>
+          <a href="#driverRequestForm">Fast Track - KSH 400</a>
+          <a href="#requests">Employer Requests</a>
+          <a href="#calendar">Calendar</a>
+          <a href="#reviews">Reviews</a>
+        </nav>
+        <section class="side-card">
+          <p class="eyebrow">Contact</p>
+          <a href="tel:0711608769">0711608769</a>
+          <a href="https://wa.me/254711608769" target="_blank" rel="noopener">WhatsApp 0711608769</a>
+          <a href="mailto:samwakariuki21@gmail.com">samwakariuki21@gmail.com</a>
+        </section>
+        <section class="side-card payment-note">
+          <p class="eyebrow">Quick Search</p>
+          <strong>KSH 400</strong>
+          <span>Drivers who need faster matching can choose M-Pesa, Airtel Money, card, or bank transfer while requesting a job.</span>
+        </section>
+      </aside>
+
+      <div class="main-page">
+        <header class="app-shell">
+          <nav class="topbar" aria-label="Primary">
+            <a class="brand" href="#home" aria-label="Sharp Consultancy Limited home">
+              <span class="brand-mark">S</span>
+              <span>Sharp Consultancy Limited</span>
+            </a>
+            <div class="contact-stack">
+              <a class="contact-link" href="tel:0711608769">0711608769</a>
+              <a class="contact-link" href="https://wa.me/254711608769" target="_blank" rel="noopener">WhatsApp request</a>
+              <a class="contact-link" href="mailto:samwakariuki21@gmail.com">samwakariuki21@gmail.com</a>
+            </div>
+            <a class="top-pdf-link" href="school-driver-requirements.pdf" target="_blank" rel="noopener">Requirements PDF</a>
+            <div class="nav-actions" role="tablist" aria-label="App sections">
+              <button class="nav-tab active" data-tab="drivers" role="tab" aria-selected="true">Drivers</button>
+              <button class="nav-tab" data-tab="staff" role="tab" aria-selected="false">Employers</button>
+            </div>
+          </nav>
+
+          <section class="hero" id="home">
+            <div class="hero-copy">
+              <p class="eyebrow">School driver hiring across Kenya</p>
+              <h1>Drivers find school jobs. Employers find qualified school drivers.</h1>
+              <p class="hero-text">
+                Sharp Consultancy Limited helps drivers discover jobs across Kenyan counties, routes, areas, and neighborhoods, while schools or employers review drivers who are ready to work now.
+              </p>
+              <div class="hero-actions">
+                <a class="primary-link" href="#jobSearch">Search Driver Jobs</a>
+                <a class="secondary-link" href="school-driver-requirements.pdf" target="_blank" rel="noopener">Open Requirements PDF</a>
+              </div>
+            </div>
+            <div class="route-visual" aria-label="Kenya route and area map">
+              <div class="nairobi-map">
+                <iframe
+                  title="Kenya route and area map"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=33.5000%2C-4.9000%2C42.1000%2C5.4000&amp;layer=mapnik&amp;marker=-1.2864%2C36.8172"
+                  loading="lazy">
+                </iframe>
+              </div>
+              <div class="visual-card">
+                <strong>Kenya Route Coverage</strong>
+                <span>Nairobi | Kiambu | Mombasa | Nakuru | Kisumu</span>
+              </div>
+            </div>
+          </section>
+        </header>
+
+        <main>
+          <section class="panel-section active" data-panel="drivers">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Driver workspace</p>
+                <h2>Search available school driving jobs</h2>
+              </div>
+              <div class="section-actions">
+                <a class="ghost-button pdf-button" href="school-driver-requirements.pdf" target="_blank" rel="noopener">Open Requirements PDF</a>
+                <button class="ghost-button" id="resetDemo" type="button">Reset Demo Data</button>
+              </div>
+            </div>
+
+            <section class="requirements-banner" aria-label="School driver requirements">
+              <div>
+                <p class="eyebrow">Required documents</p>
+                <h3>School Driver Requirements PDF</h3>
+                <p>Open the checklist for PSV licence/badge, valid driving licence, Certificate of Good Conduct, medical fitness certificate, experience proof, CV/profile, referees, and training certificates.</p>
+              </div>
+              <a class="primary-button" href="school-driver-requirements.pdf" target="_blank" rel="noopener">View PDF</a>
+            </section>
+
+            <form class="search-panel" id="jobSearch">
+              <label>
+                Search by school, employer, area, or route
+                <input id="searchText" type="search" placeholder="Example: Westlands, CBD, morning">
+              </label>
+              <label>
+                My county, route, area, or neighborhood
+                <input id="locationFilter" type="search" list="kenyaAreas" placeholder="Any location in Kenya">
+              </label>
+              <label>
+                Distance
+                <select id="rangeFilter">
+                  <option value="all">Within or outside</option>
+                  <option value="within">Within my location</option>
+                  <option value="outside">Outside my location</option>
+                </select>
+              </label>
+              <label>
+                Availability
+                <select id="shiftFilter">
+                  <option value="all">Any shift</option>
+                  <option value="Morning">Morning</option>
+                  <option value="Afternoon">Afternoon</option>
+                  <option value="Full Day">Full day</option>
+                </select>
+              </label>
+              <label>
+                Vehicle
+                <select id="vehicleFilter">
+                  <option value="all">Any vehicle</option>
+                  <option value="Bus">Bus</option>
+                  <option value="Van">Van</option>
+                  <option value="Car">Car</option>
+                </select>
+              </label>
+              <label>
+                Hiring status
+                <select id="hiringFilter">
+                  <option value="all">All jobs</option>
+                  <option value="now">Hiring now</option>
+                </select>
+              </label>
+            </form>
+            <datalist id="kenyaAreas">
+              <option value="Nairobi">
+              <option value="Westlands">
+              <option value="CBD">
+              <option value="Eastlands">
+              <option value="South B">
+              <option value="Langata">
+              <option value="Karen">
+              <option value="Kiambu">
+              <option value="Thika">
+              <option value="Ruiru">
+              <option value="Mombasa">
+              <option value="Nyali">
+              <option value="Likoni">
+              <option value="Nakuru">
+              <option value="Kisumu">
+              <option value="Eldoret">
+              <option value="Machakos">
+              <option value="Kajiado">
+              <option value="Meru">
+              <option value="Nyeri">
+              <option value="Muranga">
+              <option value="Kirinyaga">
+              <option value="Embu">
+              <option value="Kitui">
+              <option value="Garissa">
+              <option value="Kakamega">
+              <option value="Bungoma">
+              <option value="Kericho">
+              <option value="Narok">
+              <option value="Busia">
+              <option value="Kilifi">
+              <option value="Kwale">
+            </datalist>
+
+            <div class="content-grid">
+              <section class="jobs-column" aria-labelledby="openJobsTitle">
+                <div class="column-header">
+                  <h3 id="openJobsTitle">Open Jobs</h3>
+                  <span id="jobCount" class="count-pill">0 jobs</span>
+                </div>
+                <div id="jobsList" class="card-list"></div>
+              </section>
+
+              <aside class="request-form" aria-labelledby="requestFormTitle">
+                <h3 id="requestFormTitle">Driver Request</h3>
+                <p class="muted">Select a job, add your documents summary, and choose quick search if you want priority matching.</p>
+                <form id="driverRequestForm">
+                  <label>
+                    Selected job
+                    <input id="selectedJob" name="selectedJob" type="text" readonly required>
+                  </label>
+                  <label>
+                    Full name
+                    <input name="driverName" type="text" placeholder="Your name" required>
+                  </label>
+                  <label>
+                    Phone number
+                    <input name="phone" type="tel" placeholder="0711608769" required>
+                  </label>
+                  <label>
+                    Email address optional
+                    <input name="driverEmail" type="email" placeholder="driver@example.com">
+                  </label>
+                  <label>
+                    Current county, route, area, or neighborhood
+                    <input name="driverLocation" type="text" list="kenyaAreas" placeholder="Example: Kisumu, Thika, Nyali" required>
+                  </label>
+                  <label>
+                    License or credential
+                    <select name="license" required>
+                      <option value="">Choose credential</option>
+                      <option>PSV License</option>
+                      <option>NTSA School Transport Badge</option>
+                      <option>Valid Driving License</option>
+                    </select>
+                  </label>
+                  <label class="check-row">
+                    <input name="quickSearch" type="checkbox" value="Yes">
+                    <span>Use Quick Search priority matching - KSH 400</span>
+                  </label>
+                  <label>
+                    Payment method
+                    <select name="paymentMethod">
+                      <option value="">No quick search payment</option>
+                      <option>M-Pesa</option>
+                      <option>Airtel Money</option>
+                      <option>Card</option>
+                      <option>Bank Transfer</option>
+                    </select>
+                  </label>
+                  <label>
+                    Payment reference
+                    <input name="paymentReference" type="text" placeholder="M-Pesa code, card ref, or bank slip ref">
+                  </label>
+                  <label>
+                    Notes and documents held
+                    <textarea name="notes" rows="4" placeholder="Experience, route preference, PSV, good conduct, medical certificate"></textarea>
+                  </label>
+                  <div class="form-actions">
+                    <button class="primary-button" type="submit">Send Driver Request</button>
+                    <button class="whatsapp-button" id="whatsappRequestButton" type="submit" data-submit-mode="whatsapp">Submit via WhatsApp</button>
+                  </div>
+                </form>
+              </aside>
+            </div>
+          </section>
+
+          <section class="panel-section" data-panel="staff">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Employer dashboard</p>
+                <h2>Review drivers requesting employment</h2>
+              </div>
+              <span class="status-summary" id="requestSummary">No requests yet</span>
+            </div>
+
+            <div class="staff-layout">
+              <section class="post-job" aria-labelledby="postJobTitle">
+                <h3 id="postJobTitle">Post a Driver Job</h3>
+                <form id="jobForm">
+                  <label>
+                    School or employer name
+                    <input name="school" type="text" placeholder="Nairobi School Transport Ltd" required>
+                  </label>
+                  <label>
+                    School or employer email
+                    <input name="employerEmail" type="email" placeholder="school@example.com" required>
+                  </label>
+                  <label>
+                    Area or neighborhood
+                    <input name="area" type="text" list="kenyaAreas" placeholder="County, route, area, or neighborhood" required>
+                  </label>
+                  <label>
+                    Shift
+                    <select name="shift" required>
+                      <option>Morning</option>
+                      <option>Afternoon</option>
+                      <option>Full Day</option>
+                    </select>
+                  </label>
+                  <label>
+                    Vehicle
+                    <select name="vehicle" required>
+                      <option>Bus</option>
+                      <option>Van</option>
+                      <option>Car</option>
+                    </select>
+                  </label>
+                  <label>
+                    Pay
+                    <input name="pay" type="text" placeholder="KSH 1,500/day" required>
+                  </label>
+                  <label>
+                    Hiring status
+                    <select name="hiringNow" required>
+                      <option value="true">Hiring now</option>
+                      <option value="false">Collecting applications</option>
+                    </select>
+                  </label>
+                  <label>
+                    Route details
+                    <textarea name="details" rows="4" placeholder="Stops, start time, student count, required documents" required></textarea>
+                  </label>
+                  <button class="primary-button" type="submit">Publish Job</button>
+                </form>
+              </section>
+
+              <section class="requests-panel" id="requests" aria-labelledby="requestsTitle">
+                <div class="column-header">
+                  <h3 id="requestsTitle">Driver Requests</h3>
+                  <select id="requestFilter" aria-label="Filter requests by status">
+                    <option value="all">All statuses</option>
+                    <option value="New">New</option>
+                    <option value="Reviewed">Reviewed</option>
+                    <option value="Interview">Interview</option>
+                    <option value="Approved">Approved</option>
+                    <option value="Rejected">Rejected</option>
+                  </select>
+                </div>
+                <div id="requestsList" class="card-list"></div>
+              </section>
+            </div>
+
+            <section class="notifications-panel" aria-labelledby="notificationsTitle">
+              <div class="column-header">
+                <h3 id="notificationsTitle">SMS and Email Notification Queue</h3>
+                <span class="count-pill" id="notificationCount">0 notices</span>
+              </div>
+              <p class="muted">The static app prepares the exact SMS/email messages here. Live sending needs an SMS/email backend connected to your provider account.</p>
+              <div id="notificationsList" class="card-list"></div>
+            </section>
+
+            <section class="calendar-panel" id="calendar" aria-labelledby="calendarTitle">
+              <div class="section-heading">
+                <div>
+                  <p class="eyebrow">Calendar 1970-2080</p>
+                  <h2 id="calendarTitle">School driver interview calendar</h2>
+                </div>
+                <span class="count-pill" id="calendarCount">0 events</span>
+              </div>
+              <div class="calendar-layout">
+                <form id="calendarForm" class="calendar-form">
+                  <label>
+                    Event title
+                    <input name="title" type="text" placeholder="Interview with driver" required>
+                  </label>
+                  <label>
+                    Linked driver request
+                    <select name="requestId" id="calendarRequestSelect">
+                      <option value="">No linked request</option>
+                    </select>
+                  </label>
+                  <div class="date-grid">
+                    <label>
+                      Year
+                      <select name="year" id="calendarYear" required></select>
+                    </label>
+                    <label>
+                      Month
+                      <select name="month" id="calendarMonth" required>
+                        <option value="0">January</option>
+                        <option value="1">February</option>
+                        <option value="2">March</option>
+                        <option value="3">April</option>
+                        <option value="4">May</option>
+                        <option value="5">June</option>
+                        <option value="6">July</option>
+                        <option value="7">August</option>
+                        <option value="8">September</option>
+                        <option value="9">October</option>
+                        <option value="10">November</option>
+                        <option value="11">December</option>
+                      </select>
+                    </label>
+                    <label>
+                      Day
+                      <select name="day" id="calendarDay" required></select>
+                    </label>
+                  </div>
+                  <label>
+                    Time
+                    <input name="time" type="time" value="09:00" required>
+                  </label>
+                  <label>
+                    Event type
+                    <select name="type" required>
+                      <option>Interview</option>
+                      <option>Document Review</option>
+                      <option>School Follow-up</option>
+                      <option>Driver Follow-up</option>
+                    </select>
+                  </label>
+                  <label>
+                    Notes
+                    <textarea name="notes" rows="3" placeholder="Meeting location, documents, or follow-up details"></textarea>
+                  </label>
+                  <button class="primary-button" type="submit">Add Calendar Event</button>
+                </form>
+                <div id="calendarList" class="card-list"></div>
+              </div>
+            </section>
+          </section>
+
+          <section class="reviews-section" id="reviews" aria-labelledby="reviewsTitle">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Community feedback</p>
+                <h2 id="reviewsTitle">Comments and reviews</h2>
+              </div>
+              <span class="count-pill" id="reviewCount">0 reviews</span>
+            </div>
+            <div class="reviews-layout">
+              <form id="reviewForm" class="review-form">
+                <label>
+                  Name
+                  <input name="reviewer" type="text" placeholder="Your name" required>
+                </label>
+                <label>
+                  I am a
+                  <select name="role" required>
+                    <option>Driver</option>
+                    <option>Employer</option>
+                    <option>School Admin</option>
+                  </select>
+                </label>
+                <label>
+                  Comment
+                  <textarea name="comment" rows="4" placeholder="Share your experience using Sharp Consultancy Limited" required></textarea>
+                </label>
+                <button class="primary-button" type="submit">Post Review</button>
+              </form>
+              <div id="reviewsList" class="card-list"></div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <section class="assistant-widget" aria-label="Sharp Consultancy AI assistant">
+      <button class="assistant-toggle" id="assistantToggle" type="button" aria-expanded="false">
+        Ask Samuel or Angela
+      </button>
+      <div class="assistant-panel" id="assistantPanel" hidden>
+        <div class="assistant-header">
+          <div>
+            <p class="eyebrow">AI help desk</p>
+            <h3 id="assistantTitle">Choose your assistant</h3>
+          </div>
+          <button class="assistant-close" id="assistantClose" type="button" aria-label="Close assistant">x</button>
+        </div>
+        <div class="assistant-personas" role="radiogroup" aria-label="Choose assistant">
+          <button class="persona-card active" type="button" data-persona="Samuel" aria-pressed="true">
+            <span class="persona-avatar male">S</span>
+            <span>
+              <strong>Samuel</strong>
+              <small>Calm, direct job guidance</small>
+            </span>
+          </button>
+          <button class="persona-card" type="button" data-persona="Angela" aria-pressed="false">
+            <span class="persona-avatar female">A</span>
+            <span>
+              <strong>Angela</strong>
+              <small>Friendly document and payment help</small>
+            </span>
+          </button>
+        </div>
+        <div class="assistant-messages" id="assistantMessages" aria-live="polite"></div>
+        <div class="assistant-prompts" aria-label="Suggested questions">
+          <button type="button" data-question="What documents do school drivers need?">Documents</button>
+          <button type="button" data-question="How does Quick Search payment work?">KSH 400</button>
+          <button type="button" data-question="How do I find jobs near my location?">Location jobs</button>
+          <button type="button" data-question="How can employers find drivers?">Employers</button>
+        </div>
+        <form class="assistant-form" id="assistantForm">
+          <input id="assistantInput" type="text" placeholder="Ask about jobs, payments, documents, or employers" autocomplete="off" required>
+          <button class="primary-button" type="submit">Ask</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

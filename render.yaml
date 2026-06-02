@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: sharp-consultancy-driver-jobs
+    runtime: node
+    plan: free
+    buildCommand: ""
+    startCommand: "node server.js"
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: OWNER_PHONE
+        value: 0711608769
+      - key: OWNER_EMAIL
+        value: samwakariuki21@gmail.com
+      - key: RESEND_API_KEY
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+      - key: AFRICASTALKING_USERNAME
+        sync: false
+      - key: AFRICASTALKING_API_KEY
+        sync: false
+      - key: AFRICASTALKING_SENDER_ID
+        sync: false

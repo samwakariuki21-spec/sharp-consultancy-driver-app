@@ -1,0 +1,17 @@
+{
+  "name": "Sharp Consultancy Limited School Driver Jobs",
+  "short_name": "Sharp Jobs",
+  "description": "A responsive app for school drivers to find Nairobi jobs and for employers to manage driver requests.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7fbfa",
+  "theme_color": "#135d66",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "sharp-consultancy-driver-jobs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "School driver jobs website with a lightweight Node backend for requests, notifications, email, SMS, and calendar events.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
